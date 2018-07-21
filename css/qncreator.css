@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+.bdr-thm
+{
+	border-color: darkturquoise;
+    border-width: medium;
+    border-style: solid;
+}
+.opt-fldset
+{
+	width: 432px;
+}
+
+.fltrt
+{
+	float: right;
+	position: relative;
+	top: -50px;
+}

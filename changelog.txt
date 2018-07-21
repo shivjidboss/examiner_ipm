@@ -1,0 +1,133 @@
+Project name : IPM
+
+    Working Members
+ -----------------------
+|  @Shivji Ayyappan  	|
+|  @Vaisakh Anand  		|
+|  @Abhiram TS        	|
+|  @Anand Sunny			|
+ -----------------------
+
+//Changelog
+===========
+
+progress till 07-12-2016
+------------------------
+
+ah! nothing much :->
+
+# <index.php> temperory homepage for accessing front end pages
+
+# created a form <qncreator.php> for entering questions (by form submit)
+	~ saves it in an XML file <qnbank/exmpl.xml>
+	~ using <backend/qncreatorbckend.php>
+	
+# <qnaireui.php> simply retrieve and display questions from XML file (AJAX)
+	~ using <backend/qnfetcher.php>
+	
+# Question-Bank XML schema <exmpl.xml>
+
+		<question-bank>
+		  <question>
+			<category></category>
+			<qntxt></qntxt>
+			<op1></op1>
+			<op2></op2>
+			<op3></op3>
+			<op4></op4>
+		  </question>
+		</question-bank>
+
+
+=========================================================================================================================================
+
+08/12/2016
+----------
+
+# Question-Bank XML schema revised
+	~ added qpid, qnid, ans, mrk
+
+		<question-bank>
+		  <question>
+			<category></category>
+			<qnid></qnid>
+			<qpid></qpid>
+			<qntxt></qntxt>
+			<op1></op1>
+			<op2></op2>
+			<op3></op3>
+			<op4></op4>
+			<ans></ans>
+			<mrk></mrk>
+		  </question>
+		</question-bank>
+
+# MySQL database 'ipm' created
+	~ a table 'qpbank' created to store the question paper details
+	~ stores (qpid,qpname,noqs,dur,status,catg,timestamp)
+
+# Now questions are created for each question paper
+
+# <qnpcreator.php> gets question paper details
+	~ (qpname, noq, dur)
+	~ appends to 'qpbank' table
+	~ using <backend/qnpcreatorbckend.php> generates a question paper ID [qpid]
+	~ navigates to <qncreator.php>
+	
+>>> qnpcreator.php(POST) > backend/qnpcreatorbckend.php(Header)> ../qncreator.php(AJAX) > backend/qncreatorbckend.php
+	
+# <qpbank.php> displays list of question papers from 'qpbank' table
+
+	
+10/12/2016
+----------
+
+# <qpbank.php>
+	~ now provides link for taking the test using [qpid]
+	~ takes to <qnaireui.php>
+	~ still haven't implemented mechanism to store answers
+	
+>>> qpbank.php(hidden POST) > qnaireui.php(AJAX) > backend/qnfetcher.php
+
+# <qnaireui.php>
+	~ now checks if qno is within range of number of questions [noq]
+	
+# <qncreator.php>
+	~ now checks whether it is the last qn based on [noq]
+
+
+12/12/2016
+----------
+
+# <manageqp.php> displays list of question papers
+	~ for admin
+	~ provides link for editing the question paper
+	
+# <qpviewer.php>
+	~ front end for viewing all the questions & options in the question paper selected
+	~ implemented by including <backend/qpview.php>
+	~ hidden form used to send [qpid],[qnid] to <backend/qpupdater.php>
+	
+# <backend/qpview.php>
+	~ display all questions & options in the question paper selected
+	~ provides link for editing each question in the question paper
+	
+# <qpupdater.php>
+	~ front end for editing question
+	~ fetch question for editing using <backend/qpupdfetch.php> by AJAX
+	~ send data for updating to <backend/qnupdatebckend.php> using form
+	
+# <qnupdfetch.php>
+	~ generates a form same as <qncreator.php> filled in with data from XML for selected [qpid][qnid]
+	
+# <backend/qnupdatebckend.php>
+	~ updates XML file with new values for selected [qpid][qnid]
+	
+>>> manageqp.php(hidden POST) > qpviewer.php{include 'backend/qpview.php'}(hidden POST) > qnupdater.php(AJAX) > backend/qnupdfetch.php
+		++> qnupdater.php(POST) > qnupdatebckend.php
+		
+# no more empty fields in XML and 'qpbank' table
+	~check if there is POST data before creating table or XML entry in following files
+		o <qncreatorbckend.php>
+		o <qnqnpcreatorbckend.php>
+		o <qnupdatebckend.php>

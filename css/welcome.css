@@ -1,0 +1,406 @@
+@charset "utf-8";
+/* CSS Document */
+
+body 
+{ 
+  /*background: url(../resources/einsteinblackboard.jpg) no-repeat center center fixed;*/
+  background: url(../resources/login_new_new.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.adminbody 
+{ 
+  background: #424242;
+  background: url(../resources/datacenter.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*
+#loginegg
+{
+	position: fixed;
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.33);
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 0px 30px 5px rgb(109, 109, 109);
+}
+
+#loginegg:hover
+{
+	box-shadow: 0 0 50px #9ecaed;
+}
+
+*/
+
+#loginegg 
+{
+    color: white;
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: rgba(41, 41, 41, 0.84);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0px 100px rgba(0, 0, 0, 0.2), inset 0px 0px 30px 5px rgb(109, 109, 109);
+}
+
+#loginegg:hover 
+{
+    box-shadow: 0 0px 100px rgba(255, 255, 255, 0.4), inset 0px 0px 30px 5px rgb(109, 109, 109);
+}
+
+
+#adminloginegg
+{
+	position: fixed;
+	/*top: 160px;
+	left: 600px;*/
+	color: white;
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.45);
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0px 100px rgba(0, 0, 0, 0.2), inset 0px 0px 30px 5px rgb(77, 156, 255);
+}
+
+#adminloginegg:hover
+{
+	box-shadow: 0 0px 100px rgba(255, 255, 255, 0.4), inset 0px 0px 30px 5px rgb(77, 156, 255);
+}
+
+#faillogin
+{
+	color: white;
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: rgba(41, 41, 41, 0.84);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0px 100px rgba(0, 0, 0, 0.2), inset 0px 0px 30px 5px rgb(109, 109, 109);
+}
+
+#faillogin:hover
+{
+	box-shadow: 0 0 50px #ff1919, inset 0px 0px 30px 5px rgb(109, 109, 109);
+}
+
+input 
+{
+    text-align: center;
+}
+
+
+input:-webkit-autofill 
+{
+    -webkit-box-shadow: 0 0 0px 20px white inset;
+}
+
+input:focus:-webkit-autofill 
+{
+    -webkit-box-shadow: 0 0 0px 20px white inset;
+}
+
+.bgnone
+{
+    border: 2px solid #dadada;
+    border-radius: 7px;
+	background: none;
+}
+
+.bgnone:focus
+ { 
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.bg2none
+{
+    border: 2px solid #dadada;
+    border-radius: 7px;
+	background: none;
+}
+
+.bg2none:focus
+ { 
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+#login
+{
+	height: 60px;
+	width: 335px;
+	float: right;
+	display: block;
+	position: relative;
+	top: 95px;
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+}
+
+#login_tabl
+{
+	color: white;
+	border-collapse:separate;
+	font-size:13px;
+}
+
+#login_tabl col
+{
+	width: 85px;
+}
+
+.submit 
+{
+	background-color: white;
+    color: black;
+    border: 2px solid #9ecaed;
+    padding: 4px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.submit:hover 
+{
+    background-color: #9ecaed;
+    color: white;
+}
+
+.nobutton
+{
+    background: none;
+    color: white;
+    border: none;
+    text-decoration: underline;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#calladmin
+{
+	height:25px;
+	width: 25px;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+    z-index: 9;
+}
+
+#calladmin:hover +#adminlink
+{
+	display: block;
+	right: 0px;
+}
+
+#adminlink
+{
+	display: none;
+	position: absolute;
+	right: -200px;
+    bottom: 15px;
+}
+
+#adminlink:hover
+{
+	display: block;
+	right: 0px;
+}
+
+
+/*---------------------    bubble animation coutesy:http://jsfiddle.net/zr7sb/10/   -------------*/
+
+#bubbles
+{
+	height:75%;
+	width:95%;
+	position:absolute;
+}
+
+.bubble
+{
+    width: 100px;
+    height: 100px;
+    background: #0CF;
+    border-radius: 200px; 
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+	  position:absolute;
+	  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 0px 30px 5px rgba(105, 225, 255, 1);
+	-webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 0px 30px 5px rgba(105, 225, 255, 1);
+	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 0px 30px 5px rgba(105, 225, 255, 1);
+}
+
+.x1 
+{
+	  left:5%;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.2;
+    -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -o-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x2
+{
+    /*left: 200px;*/
+    left:20%;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.5;
+    -webkit-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+    -o-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+	animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+}
+
+.x3
+{
+    /*left: 350px;*/
+    left:35%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.3;
+    -webkit-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -o-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x4
+{
+    /*left: 470px;*/
+    left:67%;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+    opacity: 0.35;
+    -webkit-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -o-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+}
+
+.x5
+{
+    /*left: 150px;*/
+    left:79%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.3; 
+    -webkit-animation: moveclouds 14s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 14s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    -o-animation: moveclouds 14s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	animation: moveclouds 14s linear infinite, sideWays 3s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes moveclouds
+{ 
+    0% { 
+        top: 100%;
+    }
+    100% { 
+        top: -100%;
+    }
+}
+
+@-moz-keyframes moveclouds
+{ 
+    0% { 
+        top: 100%;
+    }
+    100% { 
+        top: -100%;
+    }
+}
+
+@-o-keyframes moveclouds
+{ 
+    0% { 
+        top: 100%;
+    }
+    100% { 
+        top: -100%;
+    }
+}
+
+@keyframes moveclouds
+{ 
+    0% { 
+        top: 100%;
+    }
+    100% { 
+        top: -100%;
+    }
+}
+
+
+@-webkit-keyframes sideWays
+{ 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@-moz-keyframes sideWays
+{ 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@-o-keyframes sideWays
+{ 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@keyframes sideWays
+{ 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+/*-------------------   end of bubble animation ---------------------*/

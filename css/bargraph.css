@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+.bargraph { 
+height: 229px; 
+position: relative; 
+background: url(../Resources/papergrid.jpg)repeat-x; 
+border-left: 1px solid #d4d4d4;
+margin: 15px auto 50px;
+}
+
+.bargraph ul.bars {
+margin: 0; 
+padding: 0; 
+/* getting rid of bullets */
+list-style-type: none;
+}
+
+.bargraph ul.bars li { 
+position: absolute; 
+background:#1C02FB;
+font-size: 12px;
+
+/*move it up from bottom label*/
+bottom: 29px; 
+width: 30px; 
+height: 200px; 
+padding: 0; margin: 0; 
+
+text-align: center; 
+font-weight: 800; 
+color: white; 
+line-height: 2.5em;
+font-size: 12px; 
+}
+
+label { 
+list-style-type: none; 
+position: absolute; bottom: 3px; 
+margin: 0; padding: 0; 
+}
+
+.label li { 
+color: white; 
+text-transform: uppercase; 
+letter-spacing: 0.1em;
+font-size: 11px;
+width: 73px;
+text-align: center;
+
+/*safeguard against a label that is too long*/
+overflow: hidden;
+float: left;
+}
+
+ul.y-axis { 
+list-style-type: none; 
+position: absolute; 
+
+/*positioning the ul box - the box that goes around the list, 100, 75,... */
+left: -45px; 
+bottom: 0;
+width: 40px;
+text-align: right;
+margin: 0; padding: 0; 
+}
+ul.y-axis li { 
+color: #aba8a8; 
+font-size: 12px;
+height: 51px;
+line-height: 51px;
+text-align: right;
+}
+

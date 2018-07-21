@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<userAnswer_Details>
+  <answer>
+    <qpid>qp00000001</qpid>
+    <noq>3</noq>
+    <total>3</total>
+    <correct>2</correct>
+    <uans>[{"qnid":"qn0000000001","uans":"1"},{"qnid":"qn0000000002","uans":"3"},{"qnid":"qn0000000003","uans":"3"}]</uans>
+    <mark>9</mark>
+    <qmark>15</qmark>
+  </answer>
+  <answer>
+    <qpid>qp00000004</qpid>
+    <noq>3</noq>
+    <total>3</total>
+    <correct>2</correct>
+    <uans>[{"qnid":"qn0000000010","uans":"2,4"},{"qnid":"qn0000000011","uans":"&gt;,25"},{"qnid":"qn0000000012","uans":"&gt;,25"}]</uans>
+    <mark>4</mark>
+    <qmark>9</qmark>
+  </answer>
+  <answer>
+    <qpid>qp00000002</qpid>
+    <noq>3</noq>
+    <total>3</total>
+    <correct>3</correct>
+    <uans>[{"qnid":"qn0000000004","uans":"4"},{"qnid":"qn0000000005","uans":"1"},{"qnid":"qn0000000006","uans":"3"}]</uans>
+    <mark>25</mark>
+    <qmark>25</qmark>
+  </answer>
+</userAnswer_Details>

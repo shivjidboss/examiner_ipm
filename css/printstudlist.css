@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document 
+
+#topbar 
+{
+    background-color: rgb(69, 212, 255);
+    height: 82px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+
+#mainlogo 
+{
+    background-image: url(../resources/ipm_logo.png);
+    background-size: contain;
+    width: 200px;
+    height: 70px;
+    position: fixed;
+    top: 6px;
+    left: 20px;
+}*/
+#topbar {	display :none; visibility: hidden;}
+
+#mainlogo {	display :none; visibility: hidden;}
+
+#tpbarright{	display :none; visibility: hidden;}
+
+#main 
+{
+    position: relative;
+    width: 100%;
+}
+
+#notification{	display: none; visibility: hidden;}
+
+#leftpane{	display:none; visibility: hidden;}
+
+#surface 
+{
+    display: inline-block;
+    vertical-align: top;
+    /* margin-left: 200px; */
+}
+
+#body_card 
+{
+    height: auto;
+    width: auto;
+    background-color: #f6fbff;
+    position: relative;
+    padding: 1.5rem;
+    padding-top: 15px;
+    box-shadow: 0 2px 20px #aaa;
+    font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+}
+
+#getlistform{	display: none; visibility: hidden;}
+
+#print-button{	display: none; visibility: hidden;}
+
+.tbl
+{
+	border-collapse: collapse;
+}
+
+.tbl td
+{
+	border: 1px solid #ddd;
+	padding: 15px 25px;
+}
+
+.tbl_hdcntr td
+{
+	text-transform: uppercase;
+	background-color:rgb(85, 177, 220);
+	padding: 12px 15px;
+	text-align: center;
+	font-weight: 600;
+}
+
+.tbl_head td
+{
+	background-color:rgb(85, 177, 220);
+	padding: 12px 15px;
+}
+
+@page {
+  size: A4;
+}
+
+@page:right{ 
+  @bottom-left {
+    margin: 10pt 0 30pt 0;
+    border-top: .25pt solid #666;
+    content: "Our Cats";
+    font-size: 9pt;
+    color: #333;
+  }
+
+  @bottom-right { 
+    margin: 10pt 0 30pt 0;
+    border-top: .25pt solid #666;
+    content: counter(page);
+    font-size: 9pt;
+  }
+
+  @top-right {
+    content:  string(doctitle);
+    margin: 30pt 0 10pt 0;
+    font-size: 9pt;
+    color: #333;
+  }
+}

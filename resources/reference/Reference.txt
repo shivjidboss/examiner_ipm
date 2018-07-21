@@ -1,0 +1,10 @@
+References
+==========
+
+Google Chart Visualization :  https://developers.google.com/chart/interactive/docs/gallery/piechart
+
+CSS Graph examples : https://designmodo.com/css-graph-chart-tutorials/
+
+Make Google Visualisation API offline :  https://gist.github.com/makevoid/3999915
+
+Radio Button: https://codepen.io/AngelaVelasquez/pen/Eypnq
